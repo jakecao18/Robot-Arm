@@ -1,0 +1,23 @@
+Item Name,Qty,Price (total) (CAD),Item link,Notes
+nema 17 stepper ,1,$15.99,link,This is an example part! Add things to note here.
+20kg servo,2,$35.99,link,Servo for wrist roll and gripper
+40kg servo,2,$45.59,link,Servo for elbow and wrist
+150kg servo,1,$46.99,link,Servo for shoulder
+esp32,1,$8.06,link,Microcontroller to control all motors
+thrust ball bearing 20mm x 40mm x 14mm,1,$11.26,link,Ball bearing at the base
+ball bearing 10mm x 26mm x 8mm,3,$13.75,link,Ball bearing at the shoulder and wrist
+ball bearing 35mm x 47mm x 7mm,2,$12.89,link,Ball bearing at the base 
+ball bearing 20mm x 32mm x 7mm,2,$11.09,link,Ball bearing at the shoulder
+HTD5M-325mm 15mm width pulley timing belt,2,$19.19,link,Belt to connect belt gears on the shoulder
+PCA9685,1,$13.56,link,Servo motor driver that handles outputting all the PWM signals
+adjustable buck converter 12V - 5 & 6V,2,$19.99,link,Buck convertor to lower voltage from 12V down to 5V for esp32 and 6V for PCA9685
+capacitor 4700 uf,2,$11.32,link,"Capacitors will be used to prevent voltage spikes; this is for the servos. This is actually 5 pieces, although you just need 2"
+SMPS 12V 20A,1,$27.89,link,"Power cord not included, so you would need one. Cutting up an old computer  power cord can also work "
+fuse,2,$11.69,link,"This is a 4-pack, but you only need 2. The fuses prevent short-circuit damage"
+power distribution block ,1,$18.51,link,"Power distribution block lets everything be more organized, it's optional since wires can be plugged directly into the power supply"
+12 AWG wire,3ft,$11.39,link,"Thicker wires can safely handle the 12V 20A power without any fluctuation or trouble, you would also need regular jumper wires"
+A4988 stepper motor driver,1,$3.50,link,This part controls the stepper motor
+capacitor 100 uf ,1,$2.17,link,This capacitor will be used for the stepper motor. This is 10 pieces but you only need 1
+Total Price (USD):,$340.82,,,
+,,,,
+All of these parts are just the ones I found immediately on Amazon; you can probably find the exact same parts for cheaper on Amazon or even somewhere else.,,,,
