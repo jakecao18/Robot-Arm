@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Robot Arm Controller</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+
+</head>
+
+<body>
+
+    <h1>Robot Arm Controller</h1>
+
+    <h2>Manual Joint Control</h2>
+
+    <div class="joint">
+        <label>Base</label>
+
+        <input
+            type="range"
+            id="baseSlider"
+            min="0"
+            max="360"
+            value="0"
+        >
+
+        <input
+            type="number"
+            id="baseInput"
+            min="0"
+            max="360"
+            value="0"
+        >
+
+        <span id="baseValue">0°</span>
+    </div>
+
+
+    <div class="joint">
+        <label>Shoulder</label>
+
+        <input
+            type="range"
+            id="shoulderSlider"
+            min="-23"
+            max="105"
+            value="90"
+        >
+
+        <input
+            type="number"
+            id="shoulderInput"
+            min="-23"
+            max="105"
+            value="90"
+        >
+
+        <span id="shoulderValue">90°</span>
+    </div>
+
+
+    <div class="joint">
+        <label>Elbow</label>
+
+        <input
+            type="range"
+            id="elbowSlider"
+            min="-180"
+            max="-15"
+            value="-90"
+        >
+
+        <input
+            type="number"
+            id="elbowInput"
+            min="-180"
+            max="-15"
+            value="-90"
+        >
+
+        <span id="elbowValue">-90°</span>
+    </div>
+
+
+    <div class="joint">
+        <label>Wrist Pitch</label>
+
+        <input
+            type="range"
+            id="wristPitchSlider"
+            min="-140"
+            max="90"
+            value="0"
+        >
+
+        <input
+            type="number"
+            id="wristPitchInput"
+            min="-140"
+            max="90"
+            value="0"
+        >
+
+        <span id="wristPitchValue">0°</span>
+    </div>
+
+
+    <div class="joint">
+        <label>Wrist Roll</label>
+
+        <input
+            type="range"
+            id="wristRollSlider"
+            min="0"
+            max="270"
+            value="90"
+        >
+
+        <input
+            type="number"
+            id="wristRollInput"
+            min="0"
+            max="270"
+            value="90"
+        >
+
+        <span id="wristRollValue">90°</span>
+    </div>
+
+
+    <div class="joint">
+        <label>Gripper</label>
+
+        <input
+            type="range"
+            id="gripperSlider"
+            min="0"
+            max="270"
+            value="90"
+        >
+
+        <input
+            type="number"
+            id="gripperInput"
+            min="0"
+            max="270"
+            value="90"
+        >
+
+        <span id="gripperValue">90°</span>
+    </div>
+
+    <h2>Inverse Kinematics</h2>
+    
+    <div class= "coordinates">
+
+        <label>X:</label>
+        <input type="number" id="xInput">
+
+        <label>Y:</label>
+        <input type="number" id="yInput">
+
+        <label>Z:</label>
+        <input type="number" id="zInput">
+
+    </div>
+
+    <button id="moveButton">MOVE</button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
