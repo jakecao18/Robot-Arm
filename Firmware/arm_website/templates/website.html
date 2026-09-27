@@ -153,9 +153,25 @@
         <span id="gripperValue">90°</span>
     </div>
 
+
+    <h2>Cartesian Movement</h2>
+
+    <div class="arrowKeys">
+
+        <button id="upButton">↑</button>
+
+        <div>
+            <button id="leftButton">←</button>
+            <button id="downButton">↓</button>
+            <button id="rightButton">→</button>
+        </div>
+
+    </div>
+
+
     <h2>Inverse Kinematics</h2>
     
-    <div class= "coordinates">
+    <div class="coordinates">
 
         <label>X:</label>
         <input type="number" id="xInput">
@@ -169,6 +185,7 @@
     </div>
 
     <button id="moveButton">MOVE</button>
+
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 

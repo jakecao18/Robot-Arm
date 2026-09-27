@@ -22,6 +22,27 @@ const yInput = document.getElementById("yInput");
 const zInput = document.getElementById("zInput");
 const moveButton = document.getElementById("moveButton");
 
+const upArrow = document.getElementById("upButton");
+const downArrow = document.getElementById("downButton");
+const rightArrow = document.getElementById("rightButton");
+const leftArrow = document.getElementById("leftButton");
+
+upArrow.addEventListener("click", function(){
+    sendArrow(1, 0, 0, 0);
+});
+
+downArrow.addEventListener("click", function(){
+    sendArrow(0, 1, 0, 0);
+});
+
+rightArrow.addEventListener("click", function(){
+    sendArrow(0, 0, 0, 1);
+});
+
+leftArrow.addEventListener("click", function(){
+    sendArrow(0, 0, 1, 0);
+});
+
 //sends the ik coordinates to /ik in app.py
 moveButton.addEventListener("click", function(){
 
@@ -143,6 +164,48 @@ gripperInput.addEventListener("input", function() {
     sendCommand()
 });
 
+
+//function that sends data to /arrow in app.py
+function sendArrow(up, down, left, right){
+
+    const command = {
+        theta_1: Number(shoulder.value),
+        theta_2: Number(elbow.value),
+        upArrow: up,
+        downArrow: down,
+        leftArrow: left,
+        rightArrow: right
+    };
+
+    fetch("/arrow", {
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(command)
+    })
+    .then(response => response.json())
+    .then(data => {
+
+        // Convert Python IK angles back to your slider angles
+        const newShoulder = data.shoulder;
+        const newElbow = data.elbow;
+
+        // Update sliders
+        shoulder.value = newShoulder;
+        elbow.value = newElbow;
+
+        // Update number inputs
+        shoulderInput.value = newShoulder;
+        elbowInput.value = newElbow;
+
+        // Update displayed values
+        shoulderValue.textContent = newShoulder + "°";
+        elbowValue.textContent = newElbow + "°";
+    });
+}
 
 
 //function that sends data to /command in app.py

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import ik
 import angle_slider
+import arrow_control
 
 app = Flask(__name__)
 
@@ -32,5 +33,22 @@ def ik_route():
         "wristPitch": j3,
         "base": j4
     }
+
+@app.route('/arrow', methods= ["POST"])
+def arrow_route():
+
+    angles = request.json
+    result = arrow_control.final_control(angles)
+
+    if result is None:
+        return {"error": "Arrow movement failed"}, 400
+
+    j1, j2 = result
+
+    return {
+        "shoulder": j1,
+        "elbow": j2,
+    }
+
 
 app.run(debug = True)

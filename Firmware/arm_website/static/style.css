@@ -1,62 +1,143 @@
 body {
+
     font-family: Arial, sans-serif;
+
     max-width: 900px;
+
     margin: 40px auto;
+
     padding: 20px;
+
 }
 
 h1 {
+
     text-align: center;
+
     margin-bottom: 40px;
+
 }
 
 h2 {
+
     margin-top: 35px;
+
 }
 
 
 .joint {
+
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
     margin: 18px 0;
+
 }
 
 .joint label {
+
     width: 110px;
+
     font-weight: bold;
+
 }
 
 .joint input[type="range"] {
+
     width: 400px;
+
 }
 
 
 .joint input[type="number"] {
+
     width: 70px;
+
     padding: 5px;
+
 }
 
 .joint span {
+
     width: 50px;
+
 }
 
-.coordinates {
+
+/* Cartesian arrow controls */
+
+.arrowKeys {
+
     display: flex;
+
+    flex-direction: column;
+
     align-items: center;
+
+    margin-top: 25px;
+
+    margin-bottom: 30px;
+
+}
+
+.arrowKeys div {
+
+    display: flex;
+
     gap: 10px;
+
+}
+
+.arrowKeys button {
+
+    width: 60px;
+
+    height: 60px;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+.arrowKeys > button {
+
+    margin-bottom: 10px;
+
+}
+
+
+.coordinates {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
     margin-top: 20px;
+
 }
 
 
 .coordinates input {
+
     width: 80px;
+
     padding: 6px;
+
 }
 
 
 #moveButton {
+
     margin-top: 25px;
+
     padding: 10px 30px;
+
     font-size: 16px;
+
 }
