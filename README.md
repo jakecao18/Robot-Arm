@@ -1,126 +1,63 @@
-# Robot Arm
+5-DOF Robotic Arm
+A 5-DOF desktop robotic arm built for computer vision experiments and automated pick-and-place tasks. Designed around 3D-printed structural components, high-torque hobby servos, and an ESP32 microcontroller driven over I2C.
+Part of the Stardance project.
+Hardware Overview
+Component
+Spec / Model
+Qty
+Notes
+Microcontroller
+ESP32 DevKit V1
+1
+Main controller
+PWM Driver
+PCA9685 (16-Channel)
+1
+I2C servo control
+Base Servo
+150 kg·cm digital servo
+1
+High-load base rotation
+Shoulder / Elbow
+40 kg·cm digital servos
+2
+Primary arm joints
+Wrist / Gripper
+20 kg·cm digital servos
+2
+End-effector orientation & grip
+Power Supply
+12V SMPS
+1
+Stepped down to servo rail
 
-A 5-DOF desktop robotic arm designed for object manipulation and AI vision. This project focuses on creating a strong, modular, and affordable robot arm using 3D-printed parts, hobby servos, an ESP32 controller, and open-source software.
-
----
-
-## Overview
-
-The goal of this project is to design and build a fully functional robotic arm capable of precise movement, autonomous control, and AI-assisted operation. The arm is designed to be modular so that components can be upgraded or replaced as the project evolves.
-
-This project is being developed as part of **Stardance**, with development documented through GitHub commits and devlogs.
-
----
-
-
-### Current
-- 3D CAD designed from scratch
-- 5 Degrees of Freedom (DOF)
-- ESP32 control system
-- Wiring schematic with all components
-
-### Planned
-- Inverse kinematics
-- AI vision using a camera
-- Object detection and tracking
-- Pick-and-place automation
-- Mobile app control
-- Voice commands
-
----
-
-## Hardware
-
-| Component | Quantity |
-|-----------|---------:|
-| ESP32 DevKit V1 | 1 |
-| PCA9685 Servo Driver | 1 |
-| 150kg Servo | 1 |
-| 40kg Servo | 2 |
-| 20kg Servo | 2 |
-| 12V SMPS | 1 |
-
-A complete Board of Materials is available in:
-
-```
-Documents/BOM.csv
-```
-
----
-
-## Repository Structure
-
-```
-Robot Arm Project/
-
+A complete parts breakdown and sourcing links are tracked in Documents/BOM.csv.
+Project Status
+[x] Full CAD assembly in Fusion 360
+[x] Wiring schematic & power distribution design
+[x] Bill of Materials finalized
+[x] Structural component 3D printing
+[x] Mechanical assembly & dry-fit
+[x] Servo calibration & zero-point alignment
+[x] Forward & inverse kinematics solver
+[x] ESP32 firmware (PWM signal mapping via PCA9685)
+[ ] OpenCV / camera integration for object detection
+[ ] Autonomous pick-and-place routines
+Repository Layout
 ├── CAD/
-│   ├── Assembly
-│   └── Individual Parts
-│
-├── Code/
-│
+│   ├── Assembly/              # Complete Fusion 360 models
+│   └── Individual Parts/      # Printable STL/STEP files
+├── Code/                      # ESP32 firmware & control scripts
 ├── Documents/
-│   ├── BOM.csv
-|   ├── Pictures
-│   ├── Wiring_Schematic.svg
-│   └── Wiring_Schematic.png
-│
-│
+│   ├── BOM.csv                # Component list, pricing, and specs
+│   ├── Pictures/              # Build logs and progress photos
+│   └── Wiring_Schematic.*     # System schematics (SVG / PNG)
 └── README.md
-```
 
----
 
-## Software
-
-- Arduino IDE
-- Python VS Code
-- Fusion 360
-
----
-
-## Progress
-
-- [x] CAD Design
-- [x] Wiring Schematic
-- [x] Board of Materials
-- [x] 3D Printing
-- [ ] Assemble robot
-- [ ] Inverse Kinematics
-- [ ] Web Control
-- [ ] AI Vision
-- [ ] Autonomous Object Manipulation
-
----
-
-## Documentation
-
-Development progress is documented through:
-
-- GitHub commits
-- Stardance devlogs
-- Build photos
-
----
-
-## Future Goals
-
-- Accurate inverse kinematics
-- Autonomous pick-and-place
-- AI-powered object recognition
-- Object tracking 
-- Voice controls
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-## Author
-
-Jake
-
-Built as a personal robotics project for learning mechanical design, embedded systems, and computer vision.
+Tech Stack & Tools
+CAD / Modeling: Autodesk Fusion 360
+Embedded Firmware: ESP-IDF / C++ via Arduino IDE
+Kinematics & Vision: Python (OpenCV, NumPy) in VS Code
+License
+Distributed under the MIT License. Designed and built by Jake.
