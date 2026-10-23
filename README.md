@@ -1,10 +1,40 @@
 # 5-DOF Robotic Arm
 
-A 5-DOF desktop robotic arm built for computer vision experiments and automated pick-and-place tasks.
+### Description
 
-The arm uses 3D-printed parts, high-torque hobby servos, and an ESP32 for control. Servo control is handled through a PCA9685 over I2C.
+A 5-DOF desktop robotic arm built for that can pick and place objects using coordinates and arrow control.
+
+The arm uses 3D-printed parts, high-torque hobby servos, and an ESP32 for control. Position calculations are ran on a laptop
 
 Part of the **Stardance** project.
+
+Devlogs are avalible on https://stardance.hackclub.com/projects/28283
+
+### Uses
+
+The arm is meant to be able to lift ojects around 1kg.
+
+This robot arm will be controlled through a local web app. It can be controlled using coordinates, joint angles, and arrow keys.
+
+### Why I built this
+
+I built project mainly to learn more about robotics and start my first big project.
+
+I have done smaller projects with arduinos kits before and want to upgrade to something a bit more complicated. I felt like a robotic arm would be educational and fun.
+
+## Wiring
+
+![Wiring Diagram](Documents/pictures & videos/circuit_image.png)
+
+## CAD
+
+![CAD Assembly](Documents/pictures & videos/v2 picture 3.png)
+
+## Physical Robot
+
+![Finished Build](Documents/pictures & videos/finished build.jpeg)
+
+![Demo video](https://www.youtube.com/watch?v=XWoJphzX7BE)
 
 ## Hardware
 
@@ -49,16 +79,6 @@ The full parts list, prices, and sourcing information are in [`Documents/BOM.csv
 │
 └── README.md
 ```
-
-## Software
-
-* **CAD:** Autodesk Fusion 360
-* **Firmware:** C++ / Arduino IDE
-* **Microcontroller:** ESP32
-* **Servo Control:** PCA9685 over I2C
-* **Kinematics:** Python, NumPy
-* **Computer Vision:** OpenCV
-* **Development:** VS Code
 
 ## License
 
