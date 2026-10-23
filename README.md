@@ -32,9 +32,7 @@ I have done smaller projects with arduinos kits before and want to upgrade to so
 
 ## Physical Robot
 
-![Finished Build](<Documents/pictures & videos/finished build.jpeg>)
-
-![Watch the demo video on Youtube](https://www.youtube.com/watch?v=XWoJphzX7BE)
+[![Robot Arm Demo Video](<Documents/pictures & videos/finished build.png>)](https://www.youtube.com/watch?v=XWoJphzX7BE)
 
 ## Hardware
 
