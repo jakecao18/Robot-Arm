@@ -24,17 +24,17 @@ I have done smaller projects with arduinos kits before and want to upgrade to so
 
 ## Wiring
 
-![Wiring Diagram](Documents/pictures & videos/circuit_image.png)
+![Wiring Diagram](<Documents/pictures & videos/circuit_image.png>)
 
 ## CAD
 
-![CAD Assembly](Documents/pictures & videos/v2 picture 3.png)
+![CAD Assembly](<Documents/pictures & videos/v2 picture 3.png>)
 
 ## Physical Robot
 
-![Finished Build](Documents/pictures & videos/finished build.jpeg)
+![Finished Build](<Documents/pictures & videos/finished build.jpeg>)
 
-![Demo video](https://www.youtube.com/watch?v=XWoJphzX7BE)
+![Watch the demo video on Youtube](https://www.youtube.com/watch?v=XWoJphzX7BE)
 
 ## Hardware
 
@@ -47,7 +47,7 @@ I have done smaller projects with arduinos kits before and want to upgrade to so
 | Wrist / Gripper  | 20 kg·cm digital servos |   2 | Wrist and gripper               |
 | Power Supply     | 12V SMPS                |   1 | Stepped down for the servo rail |
 
-The full parts list, prices, and sourcing information are in [`Documents/BOM.csv`](Documents/BOM.csv).
+The full parts list, prices, and sourcing information are in [`Documents/BOM template for robot arm - Sheet1.csv`](Documents/BOM template for robot arm - Sheet1.csv).
 
 ## Project Status
 
