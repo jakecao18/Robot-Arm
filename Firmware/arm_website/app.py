@@ -43,11 +43,12 @@ def arrow_route():
     if result is None:
         return {"error": "Arrow movement failed"}, 400
 
-    j1, j2 = result
+    j1, j2, j3 = result
 
     return {
         "shoulder": j1,
         "elbow": j2,
+        "wristPitch": j3,
     }
 
 

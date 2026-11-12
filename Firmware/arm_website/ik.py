@@ -3,7 +3,7 @@ import socket
 import json
 import time
 
-ESP_IP = "192.168.4.113"
+ESP_IP = "192.168.4.58"
 ESP_PORT = 5000
 
 def control_arm(ik_data):
@@ -17,8 +17,8 @@ def control_arm(ik_data):
     if result is not None:
         theta_1, theta_2, theta_3, theta_4 = result
         theta_1gear = 270 - ((theta_1 + 27 + 10) * 1.5)
-        theta_2gear = (theta_2 + 170) * 1.75
-        theta_3gear = theta_3 + 173
+        theta_2gear = (theta_2 + 180) * 1.75
+        theta_3gear = theta_3 + 180
         theta_4gear = theta_4 * 4.217
         esp_send(67.5, 0, 270, 0, 1)
 

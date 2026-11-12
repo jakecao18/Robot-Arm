@@ -1,7 +1,7 @@
 import socket
 import json
 
-ESP_IP = "192.168.4.113"
+ESP_IP = "192.168.4.58"
 ESP_PORT = 5000
 
 def control_slider(slider_data):
@@ -19,8 +19,8 @@ def control_slider(slider_data):
 def gear_reduction(base, shoulder, elbow, wristPitch, gripper):
     base_gear = base * 4.217
     shoulder_gear = 270 - ((shoulder + 27) * 1.5)
-    elbow_gear = (elbow + 170 + 5) * 1.75
-    wristPitch_gear = wristPitch + 173
+    elbow_gear = (elbow + 180) * 1.75
+    wristPitch_gear = wristPitch + 180
     gripper_angle = 270 - gripper
     return base_gear, shoulder_gear, elbow_gear, wristPitch_gear, gripper_angle
 

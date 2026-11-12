@@ -69,20 +69,20 @@ moveButton.addEventListener("click", function(){
         // Update sliders
         base.value = data.base / 4.217;
         shoulder.value = ((data.shoulder - 270) / -1.5) - 27;
-        elbow.value = (data.elbow / 1.75) - 170 - 5;
-        wristPitch.value = data.wristPitch - 173;
+        elbow.value = (data.elbow / 1.75) - 180;
+        wristPitch.value = data.wristPitch - 180;
 
         // Update input boxes
         baseInput.value = data.base / 4.217;
         shoulderInput.value = ((data.shoulder - 270) / -1.5) - 27;
-        elbowInput.value = (data.elbow / 1.75) - 170 - 5;
-        wristPitchInput.value = data.wristPitch - 173;
+        elbowInput.value = (data.elbow / 1.75) - 180;
+        wristPitchInput.value = data.wristPitch - 180;
 
         // Update displayed values
         baseValue.textContent = data.base / 4.217 + "°";
         shoulderValue.textContent = ((data.shoulder - 270) / -1.5) - 27 + "°";
-        elbowValue.textContent = (data.elbow / 1.75) - 170 - 5 + "°";
-        wristPitchValue.textContent = data.wristPitch - 173 + "°";
+        elbowValue.textContent = (data.elbow / 1.75) - 180 + "°";
+        wristPitchValue.textContent = data.wristPitch - 180 + "°";
 
     });
 
@@ -171,6 +171,7 @@ function sendArrow(up, down, left, right){
     const command = {
         theta_1: Number(shoulder.value),
         theta_2: Number(elbow.value),
+        theta_3: Number(wristPitch.value),
         upArrow: up,
         downArrow: down,
         leftArrow: left,
@@ -192,18 +193,22 @@ function sendArrow(up, down, left, right){
         // Convert Python IK angles back to your slider angles
         const newShoulder = data.shoulder;
         const newElbow = data.elbow;
+        const newWristPitch = data.wristPitch;
 
         // Update sliders
         shoulder.value = newShoulder;
         elbow.value = newElbow;
+        wristPitch.value = newWristPitch;
 
         // Update number inputs
         shoulderInput.value = newShoulder;
         elbowInput.value = newElbow;
+        wristPitchInput.value = newWristPitch;        
 
         // Update displayed values
         shoulderValue.textContent = newShoulder + "°";
         elbowValue.textContent = newElbow + "°";
+        wristPitchValue.textContent = newWristPitch + "°";        
     });
 }
 

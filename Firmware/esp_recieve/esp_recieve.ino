@@ -17,8 +17,8 @@ long shoulderCurrent = 90;
 unsigned long lastStepTime = 0;
 const unsigned long stepInterval = 7000;  // microseconds
 
-const char* ssid = "westlake2022";
-const char* password = "workIsFUN2023";
+const char* ssid = "EERO";
+const char* password = "Eeropass2805#";
 
 WiFiUDP udp;
 
@@ -219,7 +219,9 @@ void loop() {
         runStepper();
       }
       delay(1000);
-    } else if (shoulder != 67.5 && esp_check == 1) {
+    }
+    
+    else if (shoulder != 67.5 && esp_check == 1) {
       setStepperAngle(base);
       while(currentSteps != targetSteps){
         runStepper();
@@ -228,7 +230,8 @@ void loop() {
       moveElbowSlow(elbow);
       moveWristPitchSlow(wristPitch);
       moveShoulderSlow(shoulder);
-    }
+    } 
+    
     else if (esp_check == 0) {
       setStepperAngle(base);
       while(currentSteps != targetSteps){
@@ -239,6 +242,13 @@ void loop() {
       moveWristPitchSlow(wristPitch);
       writeAngle(3, wristRoll);
       moveShoulderSlow(shoulder);
+    }
+
+    else if (esp_check == 2){
+      moveWristPitchSlow(wristPitch);
+      moveElbowSlow(elbow);
+      moveShoulderSlow(shoulder);
+      Serial.println("arrow movement recieved");
     }
   }
 }
